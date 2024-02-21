@@ -1,0 +1,335 @@
+/* #region 基礎樣式 start*/
+.container {
+  width: 1190px;
+  margin: 0 auto; /*居中*/
+}
+/* #endregion 基礎樣式 end*/
+
+/* #region 頂部導航條 start*/
+.topbar {
+  height: 30px;
+  background-color: #ececec;
+}
+.welcome {
+  height: 30px;
+  line-height: 30px; /* height和line-height相等，文字垂直居中 */
+  font-size: 0; /* 解決inline-block元素間的空隙問題 */
+  color: #666;
+}
+.welcome span,
+a {
+  font-size: 12px;
+}
+.topbar-nav {
+  height: 30px;
+  line-height: 30px;
+}
+.welcome .hello {
+  margin-right: 28px;
+}
+.welcome .login {
+  padding-right: 10px;
+  border-right: 1px solid #666;
+}
+.welcome .register {
+  margin-left: 10px;
+}
+.topbar-nav .list {
+  height: 30px;
+  line-height: 30px;
+}
+.topbar-nav .list li {
+  float: left;
+}
+.topbar-nav .list li a {
+  padding: 0 15px;
+  border-right: 1px solid #666;
+}
+.topbar-nav .list li:first-child a {
+  padding-left: 0;
+}
+.topbar-nav .list li:last-child a {
+  padding-right: 0;
+  border-right: none;
+}
+/* #endregion 頂部導航條 end*/
+
+/* #region 頭部 start*/
+.header {
+  height: 120px;
+  /* line-height: 120px; */
+}
+.logo-img {
+  height: 120px;
+  width: 190px;
+}
+.header .search {
+  font-size: 0; /* 解決inline-block元素間的空隙問題 ( input 和 button ) */
+  margin-top: 42px;
+}
+.header .search input {
+  width: 508px;
+  height: 34px;
+  border: 1px solid #dd302d;
+}
+.header .search button {
+  width: 80px;
+  height: 36px;
+  border: 1px solid #dd302d;
+  vertical-align: top; /* 解決 search input 及 button 文字基線造成的對齊問題 ，但如果是使用line-height來置中的話，就沒辦法用這個方法了 */
+}
+/* #endregion 頭部 end*/
+
+/* #region 主導航條 start*/
+.main-nav {
+  height: 48px;
+  border-bottom: 1px solid #dd302d;
+}
+.all-types {
+  width: 190px;
+  height: 48px;
+  line-height: 48px; /* height和line-height相等，文字垂直居中 */
+  background-color: #dd302d;
+  color: #ffffff;
+  text-align: center; /* 文字水平居中 */
+  font-size: 16px;
+}
+.main-nav-list {
+  height: 48px;
+  line-height: 48px;
+}
+.main-nav-list li {
+  float: left;
+  margin: 0 10px;
+  font-size: 16px;
+}
+/* #endregion 主導航條 end*/
+
+/* #region 主要內容 start*/
+.main-content {
+  margin-top: 10px;
+}
+.main-content .slide-nav {
+  width: 190px;
+  height: 458px;
+  background-color: #f4f4f4;
+  position: relative; /*相對定位，為了讓li裡面的second-menu能夠絕對定位*/
+}
+.main-content .slide-nav li {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  padding-left: 16px;
+}
+.main-content .slide-nav li:hover {
+  background-color: #dd302d;
+}
+.main-content .slide-nav li:hover > a {
+  /*當滑鼠移到li上時，a的顏色變白*/
+  color: white;
+}
+.second-menu {
+  width: 680px;
+  height: 458px;
+  background-color: whitesmoke;
+  position: absolute; /*絕對定位，參考父元素(有相對定位的li)來定位*/
+  top: 0; /*參考父元素(有相對定位的li)來定位, 向上0為父元素li的位置*/
+  left: 190px; /*參考父元素(有相對定位的li)來定位, 左邊190px為父元素位置*/
+  display: none; /*隱藏second-menu*/
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.second-menu dl {
+  /* height: 36px;  因為導致跑版，所以先拿掉 */
+  line-height: 36px;
+}
+.second-menu dt {
+  float: left;
+  width: 70px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.second-menu dd {
+  float: left;
+}
+.second-menu dd a {
+  padding: 0 10px;
+  border-left: 1px solid #666;
+}
+.main-content .slide-nav li:hover .second-menu {
+  display: block; /*當滑鼠移到li上時，顯示second-menu*/
+}
+.main-content .banner {
+  width: 690px;
+  height: 458px;
+  background-image: url(../images/banner.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 10px;
+}
+.main-content .slide-other {
+  width: 290px;
+  height: 458px;
+}
+.slide-other .message {
+  width: 260px;
+  height: 156px;
+  padding: 0 14px;
+  border: 1px solid #d9d9d9;
+}
+.message .message-title {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.message .message-title span {
+  font-size: 14px;
+  font-weight: bold;
+}
+.message .message-title a {
+  font-size: 12px;
+}
+.message .message-content li {
+  height: 26px;
+  line-height: 26px;
+}
+.slide-other .other-nav{
+  margin-top: 10px;
+  padding-top: 10px;
+  width: 290px;
+  height: 290px;
+  
+}
+.other-nav-list{
+  margin-left: 16px;
+}
+.other-nav-list:nth-child(2){
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+.other-nav-list li{
+  width: 45px;
+  height: 70px;
+  float: left;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.other-nav-list .picture{
+  width: 48px;
+  height: 48px;
+  background-image: url(https://picsum.photos/192/144); /* 先取得圖片 */
+}
+.other-nav-list:nth-child(1) li:nth-child(1) .picture{
+  background-position: 0 0; 
+  /* 使用background-position來選擇要顯示的圖片中的哪一部分，
+  他是使用圖片的xy座標來定位，這麼做的原因是只用一張大圖片，切割成多張小圖片，
+  這樣可以減少請求次數，提高網頁效能 */
+}
+.other-nav-list:nth-child(1) li:nth-child(2) .picture{
+  background-position: -48px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(3) .picture{
+  background-position: -96px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(4) .picture{
+  background-position: -144px 0;
+}
+.other-nav-list:nth-child(2) li:nth-child(1) .picture{
+  background-position: 0 -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(2) .picture{
+  background-position: -48px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(3) .picture{
+  background-position: -96px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(4) .picture{
+  background-position: -144px -48px;
+}
+.other-nav-list:nth-child(3) li:nth-child(1) .picture{
+  background-position: 0 -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(2) .picture{
+  background-position: -48px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(3) .picture{
+  background-position: -96px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(4) .picture{
+  background-position: -144px -96px;
+}
+
+/* #endregion 主要內容 end*/
+
+/* #region 秒殺區 start*/
+.seckill img{
+  float: left;
+  margin-right: 11px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.seckill img:last-child{
+  margin-right: 0;
+}
+/* #endregion 秒殺區 end*/
+
+/* #region 樓層 start*/
+.floor{
+  margin-top: 48px;
+}
+.floor-name{
+  font-size: 20px;
+  font-weight: bold;
+}
+.floor-nav{
+  height: 30px;
+  line-height: 30px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #dd302d;
+}
+.floor-nav li{
+  float: left;
+  font-size: 14px;
+}
+.floor-nav li a{
+  padding: 0 10px;
+  border-right: 1px solid #666;
+}
+.floor-nav li:last-child a{
+  border-right: none;
+}
+.floor-info .item{
+  float: left;
+  cursor: pointer;
+}
+.floor-info .item1{
+  width: 230px;
+  height: 432px;
+  background-color: blue;
+}
+.floor-info .item2{
+  width: 340px;
+  height: 432px;
+  background-color: #dd302d;
+}
+.floor-info .item3{
+  width: 206px;
+  height: 432px;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  background-color: aqua;
+}
+.floor-info .item4{
+  width: 206px;
+  height: 432px;
+  background-color: antiquewhite;
+}
+.floor-info .item5{
+  width: 206px;
+  height: 432px;
+  background-color: #dd302d;
+}
+
+/* #endregion 樓層 end*/

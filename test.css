@@ -1,0 +1,27 @@
+.test1{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+.test2{
+    background-color: blue;
+    width: 150px;
+    height: 150px;
+}
+.test3{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+.test4{
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+}
+.test5{
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
